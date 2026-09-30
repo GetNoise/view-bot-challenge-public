@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+node_modules/
+.DS_Store
+# SQLite side files; the database itself (db/view-bot.sqlite) is committed.
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm

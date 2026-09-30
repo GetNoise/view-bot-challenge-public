@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Stage the latest Claude Code / Codex transcripts into every commit.
+# Enable once per clone:  git config core.hooksPath .githooks
+set -e
+root="$(git rev-parse --show-toplevel)"
+"$root/scripts/archive-chat-logs.sh" </dev/null || true
+git add -A -- "$root/chat-logs" 2>/dev/null || true
